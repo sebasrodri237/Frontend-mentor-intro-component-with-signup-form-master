@@ -8,35 +8,37 @@
   
   <title>Frontend Mentor | Intro component with sign up form</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
+  <link rel="stylesheet" href="css/normalize.css">
 </head>
 <body>
-
-  Learn to code by watching others
-
-  See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
-  but understanding how developers think is invaluable. 
-
-  Try it free 7 days then $20/mo. thereafter
-
-  First Name 
-  Last Name 
-  Email Address
-  Password
-
-  Claim your free trial 
-
-  By clicking the button, you are agreeing to our Terms and Services
+  <section class="main-text">
+    <h2 class="main-text__title">Learn to code watching others</h2>
+    <p class="main-text__text">See how experienced developers solve problems in real-time.<br>Watching scripted tutorials is great, but understanding how<br>developers thin is invaluable.</p>
+  </section>
   
+  <section class="register">
+    <div class="register-container">
+      <h3 tabindex="0">Try it free 7 days then $20/mo.thereafter</h3>
+      <form action="" class="register-container__form">
+        <input aria-label="First Name" type="text" class="input" placeholder="First Name">
+        <input aria-label="Last Name" type="text" class="input" placeholder="Last Name">
+        <input aria-label="Mail" type="text" class="input" placeholder="Email Adress">
+        <input aria-label="Password" type="password" class="input" placeholder="Password">
+        <button class="button">CLAIM YOUR FREE TRIAL</button>
+        <p class="register-container__terms">By clicking the button, you are agreeing to our<a href="#"> Terms and Services</a></p>
+      </form>
+    </div>
+  </section>
+
   <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
+      <p class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="https://github.com/sebasrodri237/Challenges-Frontend-Mentor">Sebastian Rodriguez Ardila</a> from: Colombia.
+      </p>
   </footer>
 </body>
 </html>
