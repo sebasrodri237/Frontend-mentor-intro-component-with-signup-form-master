@@ -7,38 +7,37 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Intro component with sign up form</title>
-
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/layout.css">
 </head>
 <body>
-  <section class="main-text">
-    <h2 class="main-text__title">Learn to code watching others</h2>
-    <p class="main-text__text">See how experienced developers solve problems in real-time.<br>Watching scripted tutorials is great, but understanding how<br>developers thin is invaluable.</p>
+  <section class="container">
+    <section class="main-text">
+      <h2 class="main-text__title">Learn to code watching others</h2>
+      <p class="main-text__text">See how experienced developers solve problems in real-time.<br>Watching scripted tutorials is great, but understanding how<br>developers thin is invaluable.</p>
   </section>
+    
+    <h3 tabindex="0" class="try-title">Try it free 7 days then $20/mo.thereafter</h3>
   
-  <section class="register">
-    <div class="register-container">
-      <h3 tabindex="0">Try it free 7 days then $20/mo.thereafter</h3>
-      <form action="" class="register-container__form">
-        <input aria-label="First Name" type="text" class="input" placeholder="First Name">
-        <input aria-label="Last Name" type="text" class="input" placeholder="Last Name">
-        <input aria-label="Mail" type="text" class="input" placeholder="Email Adress">
-        <input aria-label="Password" type="password" class="input" placeholder="Password">
-        <button class="button">CLAIM YOUR FREE TRIAL</button>
-        <p class="register-container__terms">By clicking the button, you are agreeing to our<a href="#"> Terms and Services</a></p>
-      </form>
-    </div>
+    <section class="register">
+      <div class="register-container">
+        <form action="" class="register-container__form">
+          <input aria-label="First Name" type="text" class="input" placeholder="First Name">
+          <input aria-label="Last Name" type="text" class="input" placeholder="Last Name">
+          <input aria-label="Mail" type="text" class="input" placeholder="Email Adress">
+          <input aria-label="Password" type="password" class="input" placeholder="Password">
+          <button class="button">CLAIM YOUR FREE TRIAL</button>
+          <p class="register-container__terms">By clicking the button, you are agreeing to our<a href="#"> Terms and Services</a></p>
+        </form>
+      </div>
+    </section>
+  
+    <footer class="attribution">
+        <p>
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+          Coded by <a href="https://github.com/sebasrodri237/Challenges-Frontend-Mentor">Sebastian Rodriguez Ardila</a> from: Colombia.
+        </p>
+    </footer>
   </section>
-
-  <footer>
-      <p class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-        Coded by <a href="https://github.com/sebasrodri237/Challenges-Frontend-Mentor">Sebastian Rodriguez Ardila</a> from: Colombia.
-      </p>
-  </footer>
 </body>
 </html>

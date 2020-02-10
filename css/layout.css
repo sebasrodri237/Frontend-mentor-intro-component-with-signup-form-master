@@ -1,0 +1,27 @@
+.container{
+
+    width: 1440px;
+    height: auto;
+    display: grid;
+    grid-template-rows: 190px 500px 80px;
+    grid-template-columns: 150px 550px 40px 550px 150px;
+    grid-template-areas: " . . . try-title . "
+                         " . main-text . register . "
+                         " . . . attribution . ";
+}
+.try-title{
+
+    grid-area: try-title;
+}
+.main-text{
+
+    grid-area: main-text;
+}
+.register{
+
+    grid-area: register;
+}
+.attribution{
+
+    grid-area: attribution;
+}

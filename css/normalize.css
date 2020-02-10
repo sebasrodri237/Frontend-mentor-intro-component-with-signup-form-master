@@ -230,6 +230,10 @@
     padding: 0.35em 0.75em 0.625em;
   }
   
+  input{
+
+    display: block;
+  }
   /**
    * 1. Correct the text wrapping in Edge and IE.
    * 2. Correct the color inheritance from `fieldset` elements in IE.
@@ -343,7 +347,7 @@
   /**
    * Add the correct display in IE 10.
    */
-  
+   
   [hidden] {
     display: none;
   }
