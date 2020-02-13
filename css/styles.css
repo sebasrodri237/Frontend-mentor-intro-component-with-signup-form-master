@@ -1,0 +1,15 @@
+body{
+
+    background-image: url(../images/bg-intro-desktop.png);
+    background-color: rgba(255,121,120,0.9);
+}
+.main-text__title{
+
+    font-size: 50px;
+    color:#ffffff;
+}
+.main-text__text{
+
+    font-size: 16px;
+    color:#ffffff;
+}
