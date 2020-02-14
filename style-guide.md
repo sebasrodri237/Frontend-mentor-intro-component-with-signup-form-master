@@ -11,8 +11,8 @@ The designs were created to the following widths:
 
 ### Primary
 
-- Red: hsl(0, 100%, 74%) 
-- Green: hsl(154, 59%, 51%)
+- Red: rgba(255,121,120,0.9); 
+- Green: #37CC8A
 
 ### Accent
 
@@ -20,7 +20,7 @@ The designs were created to the following widths:
 
 ### Neutral
 
-- Dark Blue: hsl(249, 10%, 26%) 
+- Dark Blue: #5D54A3 
 - Grayish Blue: hsl(246, 25%, 77%)
 
 ## Typography
