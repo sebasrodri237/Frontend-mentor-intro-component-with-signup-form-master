@@ -16,6 +16,23 @@
     height: 50px;
     letter-spacing: 0.2px;
 }
+/*CORRECT THESE TWO CLASSES IN A ONLY ONE BLOCK USING SASS */
+.attribution{
 
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    color: #ffffff;
+    font-size: 12px; 
+    font-family: 'Open Sans', sans-serif;
+    vertical-align: bottom;
+    letter-spacing: 0.2px;
+    word-spacing: 1px;
+}
+.attribution a{
+
+    color:#3E52A3;
+    font-weight: 600;
+}
 
 

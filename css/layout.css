@@ -5,13 +5,13 @@
     display: grid;
     grid-template-rows: 190px 500px 80px;
     grid-template-columns: 150px 550px 40px 550px 150px;
-    grid-template-areas: " . . . try-title . "
+    grid-template-areas: " . . . try . "
                          " . main-text . register . "
-                         " . . . attribution . ";
+                         " . . . attribution attribution ";
 }
-.try-title{
+.try{
 
-    grid-area: try-title;
+    grid-area: try;
 }
 .main-text{
 
