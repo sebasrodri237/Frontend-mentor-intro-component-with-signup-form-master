@@ -3,11 +3,18 @@ body{
     background-image: url(../images/bg-intro-desktop.png);
     background-color: rgba(255,121,120,0.9);
 }
+.main-text__break--desktop{
+
+    display: initial;
+}
+.main-text__break--mobile{
+
+    display: none;
+}
 .main-text{
 
     font-family: 'Poppins', sans-serif;
     margin-top: 55px;
-    
 }
 .main-text__title{
 
@@ -37,7 +44,7 @@ body{
     border-radius: 10px;
     text-align: center;
     height: 20px;
-    width: 470px;
+    width: 100%;
     color:#ffffff;
     font-size: 14px;
     font-weight: 400;
@@ -57,7 +64,7 @@ body{
 .input{
 
     height: 52px;
-    width: 430px;
+    width: 90%;
     border: 1px solid #E2E2E2;
     border-radius: 5px;
     font-size: 14px;
@@ -75,7 +82,7 @@ body{
 
     background-color: #37CC8A;
     box-shadow: 0px 4px 0px 0px rgba(84,172,134,1);
-    width: 470px;
+    width: 100%;
     font-size: 16px;
     font-weight: 600;
     font-family: 'Poppins', sans-serif;

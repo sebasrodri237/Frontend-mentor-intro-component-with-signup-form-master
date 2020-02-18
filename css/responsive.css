@@ -1,0 +1,57 @@
+@media only screen and (max-width: 728px) {
+    
+    .container{
+
+        width: auto;
+        display: block;
+    }
+    .main-text__break--mobile{
+
+        display: initial;
+    }
+    .main-text__break--desktop{
+
+        display: none;
+    }
+    .main-text{
+
+        width: auto;
+        text-align: center;
+    }
+    .main-text__title{
+
+        font-size: 30px;
+    }
+    .main-text__text{
+
+        font-size: 16px;
+        width: auto;
+    }
+    .try{
+        width: 90%;
+        margin-left: 20px;
+    }
+    .try__title{
+
+        width: 80%;
+        height: 50px;
+        line-height: 25px;
+    }
+    .register-container{
+
+        width: 80%;
+        padding: 20px;
+        margin-left: 20px;
+    }
+    .input{
+
+        width: 90%;
+        padding-left: 15px;
+    }
+    .attribution{
+
+        margin-top: 10px;
+        font-size: 10px; 
+        text-align: center;
+    }
+}
