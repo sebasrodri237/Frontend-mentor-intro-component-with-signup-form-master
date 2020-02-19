@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="css/module.css">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <script src="javascript/validation.js"></script>
 </head>
 <body>
   <section class="container">
@@ -28,12 +29,13 @@
   
     <section class="register">
       <div class="register-container">
-        <form action="" class="register-container__form">
-          <input aria-label="First Name" type="text" class="input" placeholder="First Name">
-          <input aria-label="Last Name" type="text" class="input" placeholder="Last Name">
-          <input aria-label="Mail" type="text" class="input" placeholder="Email Address">
-          <input aria-label="Password" type="password" class="input" placeholder="Password">
-          <button class="button">CLAIM YOUR FREE TRIAL</button>
+        <form action="" class="register-container__form" novalidate >
+          <input aria-label="First Name" type="text" class="input" id="first_name" placeholder="First Name" required >
+          <input aria-label="Last Name" type="text" class="input" id="last_name" placeholder="Last Name" required >
+          <input aria-label="Mail" type="text" class="input" id="mail" placeholder="Email Address" required >
+          <span class="register-container__error active">Por favor escriba un email</span>
+          <input aria-label="Password" type="password" class="input" id="password" placeholder="Password" required >
+          <button class="button" id="button_send" type="submit">CLAIM YOUR FREE TRIAL</button>
           <p class="register-container__terms">By clicking the button, you are agreeing to our<a class="register-container__link" href="#"><br class="main-text__break--mobile"> Terms and Services</a></p>
         </form>
       </div>
