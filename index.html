@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,500i,600,700,800&display=swap" rel="stylesheet"> 
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet"> 
   
   <title>Frontend Mentor | Intro component with sign up form</title>
@@ -29,13 +29,16 @@
   
     <section class="register">
       <div class="register-container">
-        <form action="" class="register-container__form" novalidate >
+        <form action="" class="register-container__form" id="form" novalidate >
           <input aria-label="First Name" type="text" class="input" id="first_name" placeholder="First Name" required >
+          <span class="register-container__error" id="error">First Name cannot be empty</span>
           <input aria-label="Last Name" type="text" class="input" id="last_name" placeholder="Last Name" required >
+          <span class="register-container__error" id="error">Last Name cannot be empty</span>
           <input aria-label="Mail" type="text" class="input" id="mail" placeholder="Email Address" required >
-          <span class="register-container__error active">Por favor escriba un email</span>
+          <span class="register-container__error" id="error">Looks like this is not an email</span>
           <input aria-label="Password" type="password" class="input" id="password" placeholder="Password" required >
-          <button class="button" id="button_send" type="submit">CLAIM YOUR FREE TRIAL</button>
+          <span class="register-container__error" id="error">Password cannot be empty</span>
+          <button class="button" id="button_send" type="submit" onclick="getValues()">CLAIM YOUR FREE TRIAL</button>
           <p class="register-container__terms">By clicking the button, you are agreeing to our<a class="register-container__link" href="#"><br class="main-text__break--mobile"> Terms and Services</a></p>
         </form>
       </div>

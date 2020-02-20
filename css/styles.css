@@ -105,3 +105,17 @@ body{
     color: #FF7978;
     font-weight: 600;
 }
+.input-error{
+
+    border: 1px solid #CF8D8E;
+}
+.register-container__error{
+
+    display:none;
+    color: #CF8D8E;
+    font-size: 12px;
+    font-weight: 500;
+    font-style: italic;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 290px;
+}
