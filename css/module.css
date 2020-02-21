@@ -16,7 +16,7 @@
     height: 50px;
     letter-spacing: 0.2px;
 }
-/*CORRECT THESE TWO CLASSES IN A ONLY ONE BLOCK USING SASS */
+/*CORRECT THESE TWO CLASSES AS ONE BLOCK IN THE FUTURE USING NESTING WITH SASS*/
 .attribution{
 
     display: flex;

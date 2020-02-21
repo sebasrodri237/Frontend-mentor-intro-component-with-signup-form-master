@@ -4,23 +4,23 @@ function getValues(){
     const lastName = document.getElementById("last_name");
     const mail = document.getElementById("mail");
     const password = document.getElementById("password");
-    const form  = document.getElementById("form");
     const button = document.getElementById("button_send");
+    const form  = document.getElementById("form");
 
     const inputRed = document.getElementsByClassName("input");
     const error = document.getElementsByClassName("register-container__error");
-    form.addEventListener('submit',validationForm(error,firstName,lastName,password,inputRed,button),false);
+
+    form.addEventListener('submit',validationForm(firstName,lastName,password,inputRed,button,error),false);
 
 }
     
-function validationForm(error,firstName,lastName,password,inputRed,button) {
+function validationForm(firstName,lastName,password,inputRed,button,error) {
 
     let errorState = false;
 
     /*LAST NAME VALIDATION */  
     if( firstName.value == ""){
 
-        console.log(error[0]);
         error[0].style.display = "initial";
         inputRed[0].classList.add('input-error');
         inputRed[0].style.margin = "0px 0px 5px 0px";
@@ -46,7 +46,7 @@ function validationForm(error,firstName,lastName,password,inputRed,button) {
 
     /*MAIL VALIDATION */
     /*Sentence to validate mail is from: https://es.stackoverflow.com/questions/142/validar-un-email-en-javascript-que-acepte-todos-los-caracteres-latinos,
-    autor: Mariano,
+    author/user name: Mariano,
     date: 1 dic. 15 at 20:55*/
     if (/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i.test(mail.value)){
 
@@ -73,8 +73,8 @@ function validationForm(error,firstName,lastName,password,inputRed,button) {
         error[3].style.display = "none";
         inputRed[3].classList.remove('input-error');
     }
-    console.log(errorState);
 
+    /*RETURN THE STYLES AND STATES TO THE ORIGINAL VALUES*/
     if(errorState == false){
 
         firstName.value = "";

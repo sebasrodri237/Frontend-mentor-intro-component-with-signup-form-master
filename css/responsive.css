@@ -48,6 +48,15 @@
         width: 90%;
         padding-left: 15px;
     }
+    .input-error{
+
+        background-position-x: 250px;
+    }
+    .register-container__error{
+    
+        font-size: 12px;
+        margin-left: 120px;
+    }
     .attribution{
 
         margin-top: 10px;

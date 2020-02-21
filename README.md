@@ -1,4 +1,8 @@
-# Frontend Mentor - Intro component with sign up form
+# FINAL COMMENTARIES FROM THE AUTOR OF THE REPOSITORY
+
+Hi my name is Sebastian Rodriguez Ardila and I from Latin America. Please give me advices and tricks to improve my code and my skills, this is my second challenge and I think I made a great job. THANKS!!!
+
+# Frontend Mentor - Intro component with signup form master
 
 ![Design preview for the Intro component with sign up form coding challenge](./design/desktop-preview.jpg)
 
