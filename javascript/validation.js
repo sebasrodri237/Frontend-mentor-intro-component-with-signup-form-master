@@ -6,63 +6,91 @@
 
     const inputError = document.getElementsByClassName("input");
     const errorMessage = document.getElementsByClassName("register-container__error");
+    const NUMBER_DATA = 4;
 
 class form{
 
     constructor(){
         
+        this.getData(); 
         this.validateInformation();
+    }
+    
+    getData(){
+
+        this.data = new Array(NUMBER_DATA).fill(0);
+        this.data = [firstName.value,
+                    lastName.value,
+                    mail.value,
+                    password.value]
     }
 
     validateInformation(){
 
         this.validate = true
-        this.validateFirstName();
-        this.validatelastName();
-        this.validateMail();
-        this.validatePassword();
+        for (let i = 0; i < this.data.length; i++) {
+            if(this.data[i] == "" && i != 2){
 
-    }
-    validateFirstName(){
-
-        if(firstName.value == ""){
-
-            this.validate = false;
-            errorMessage[0].style.display = "initial";
-            inputError[0].classList.add('input-error');
-            inputError[0].style.margin = "0px 0px 5px 0px";
+                this.invalidData(i);
+            }else if(i == 2 && !(/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i.test(this.data[i]))){
+                /*MAIL VALIDATION */
+                //     /*Sentence to validate mail is from: https://es.stackoverflow.com/questions/142/validar-un-email-en-javascript-que-acepte-todos-los-caracteres-latinos,
+                //     author/user name: Mariano,
+                //     date: 1 dic. 15 at 20:55*/
+                this.invalidData(i);
+            }
+            
         }
+
     }
-    validatelastName(){
 
-        if(lastName.value == ""){
+    invalidData(posicion){
 
-            this.validate = false;
-            errorMessage[1].style.display = "initial";
-            inputError[1].classList.add('input-error');
-            inputError[1].style.margin = "0px 0px 5px 0px";
-        }
+        this.validate = false;
+        errorMessage[posicion].style.display = "initial";
+        inputError[posicion].classList.add('input-error');
+        inputError[posicion].style.margin = "0px 0px 5px 0px";
     }
-    validateMail(){
+    // validateFirstName(){
 
-        if(!(/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i.test(mail.value))){
+    //     if(firstName.value == ""){
 
-            this.validate = false;
-            errorMessage[2].style.display = "initial";
-            inputError[2].classList.add('input-error');
-            inputError[2].style.margin = "0px 0px 5px 0px";
-        }
-    }
-    validatePassword(){
+    //         this.validate = false;
+    //         errorMessage[0].style.display = "initial";
+    //         inputError[0].classList.add('input-error');
+    //         inputError[0].style.margin = "0px 0px 5px 0px";
+    //     }
+    // }
+    // validatelastName(){
 
-        if(password.value == ""){
+    //     if(lastName.value == ""){
 
-            this.validate = false;
-            errorMessage[3].style.display = "initial";
-            inputError[3].classList.add('input-error');
-            inputError[3].style.margin = "0px 0px 5px 0px";
-        }
-    }
+    //         this.validate = false;
+    //         errorMessage[1].style.display = "initial";
+    //         inputError[1].classList.add('input-error');
+    //         inputError[1].style.margin = "0px 0px 5px 0px";
+    //     }
+    // }
+    // validateMail(){
+
+    //     if(!(/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i.test(mail.value))){
+
+    //         this.validate = false;
+    //         errorMessage[2].style.display = "initial";
+    //         inputError[2].classList.add('input-error');
+    //         inputError[2].style.margin = "0px 0px 5px 0px";
+    //     }
+    // }
+    // validatePassword(){
+
+    //     if(password.value == ""){
+
+    //         this.validate = false;
+    //         errorMessage[3].style.display = "initial";
+    //         inputError[3].classList.add('input-error');
+    //         inputError[3].style.margin = "0px 0px 5px 0px";
+    //     }
+    // }
 }
 
 
