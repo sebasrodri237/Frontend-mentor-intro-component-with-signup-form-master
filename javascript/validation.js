@@ -15,29 +15,49 @@ class form{
         this.getData(); 
         this.validateInformation();
     }
-    
+
     getData(){
 
         this.data = new Array(NUMBER_DATA).fill(0);
-        this.data = [firstName.value,
-                    lastName.value,
-                    mail.value,
-                    password.value]
-    }
+        this.dataValue = new Array(NUMBER_DATA).fill(0);
+        this.dataType = new Array(NUMBER_DATA).fill(0);
 
+        this.data = [firstName,
+            lastName,
+            mail,
+            password];
+
+        this.dataValue = [firstName.value,
+                        lastName.value,
+                        mail.value,
+                        password.value];
+                    
+        this.dataType = [firstName.type,
+            lastName.type,
+            mail.type,
+            password.type];
+    }
+    
     validateInformation(){
 
         this.validate = true
-        for (let i = 0; i < this.data.length; i++) {
-            if(this.data[i] == "" && i != 2){
-
+        for (let i = 0; i < NUMBER_DATA; i++) {
+            if(this.dataValue[i] == "" && this.dataType[i] != "email"){
+                
                 this.invalidData(i);
-            }else if(i == 2 && !(/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i.test(this.data[i]))){
+            }else if(this.dataType[i] != "email"){
+                
+                this.validData(i);
+            }
+
+            if(this.dataType[i] == "email" && !(/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i.test(this.dataValue[i]))){
                 /*MAIL VALIDATION */
                 //     /*Sentence to validate mail is from: https://es.stackoverflow.com/questions/142/validar-un-email-en-javascript-que-acepte-todos-los-caracteres-latinos,
                 //     author/user name: Mariano,
                 //     date: 1 dic. 15 at 20:55*/
                 this.invalidData(i);
+            }else if(i == 2){
+                this.validData(i);
             }
             
         }
@@ -51,144 +71,19 @@ class form{
         inputError[posicion].classList.add('input-error');
         inputError[posicion].style.margin = "0px 0px 5px 0px";
     }
-    // validateFirstName(){
 
-    //     if(firstName.value == ""){
+    validData(posicion){
 
-    //         this.validate = false;
-    //         errorMessage[0].style.display = "initial";
-    //         inputError[0].classList.add('input-error');
-    //         inputError[0].style.margin = "0px 0px 5px 0px";
-    //     }
-    // }
-    // validatelastName(){
-
-    //     if(lastName.value == ""){
-
-    //         this.validate = false;
-    //         errorMessage[1].style.display = "initial";
-    //         inputError[1].classList.add('input-error');
-    //         inputError[1].style.margin = "0px 0px 5px 0px";
-    //     }
-    // }
-    // validateMail(){
-
-    //     if(!(/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i.test(mail.value))){
-
-    //         this.validate = false;
-    //         errorMessage[2].style.display = "initial";
-    //         inputError[2].classList.add('input-error');
-    //         inputError[2].style.margin = "0px 0px 5px 0px";
-    //     }
-    // }
-    // validatePassword(){
-
-    //     if(password.value == ""){
-
-    //         this.validate = false;
-    //         errorMessage[3].style.display = "initial";
-    //         inputError[3].classList.add('input-error');
-    //         inputError[3].style.margin = "0px 0px 5px 0px";
-    //     }
-    // }
+        this.validate = true
+        errorMessage[posicion].style.display = "none";
+        inputError[posicion].classList.remove('input-error');
+        inputError[posicion].style.margin = "0px 0px 20px 0px";
+        this.data[posicion].value = "";
+    }
+        
 }
-
 
 function getValues(){
 
     this.form = new form();
 }
-
-// function getValues(){
-
-//     const firstName = document.getElementById("first_name");
-//     const lastName = document.getElementById("last_name");
-//     const mail = document.getElementById("mail");
-//     const password = document.getElementById("password");
-//     const button = document.getElementById("button_send");
-//     const form  = document.getElementById("form");
-
-//     const inputRed = document.getElementsByClassName("input");
-//     const error = document.getElementsByClassName("register-container__error");
-
-//     form.addEventListener('submit',validationForm(firstName,lastName,password,inputRed,button,error),false);
-
-// }
-    
-// function validationForm(firstName,lastName,password,inputRed,button,error) {
-
-//     let errorState = false;
-
-//     /*LAST NAME VALIDATION */  
-//     if( firstName.value == ""){
-
-//         error[0].style.display = "initial";
-//         inputRed[0].classList.add('input-error');
-//         inputRed[0].style.margin = "0px 0px 5px 0px";
-//         errorState = true;
-//     }else{
-
-//         error[0].style.display = "none";
-//         inputRed[0].classList.remove('input-error');
-//     }
-
-//     /*LAST NAME VALIDATION */
-//     if( lastName.value == ""){
-
-//         error[1].style.display = "initial";
-//         inputRed[1].classList.add('input-error');
-//         inputRed[1].style.margin = "5px 0px 5px 0px";
-//         errorState = true;
-//     }else{
-
-//         error[1].style.display = "none";
-//         inputRed[1].classList.remove('input-error');
-//     }
-
-//     /*MAIL VALIDATION */
-//     /*Sentence to validate mail is from: https://es.stackoverflow.com/questions/142/validar-un-email-en-javascript-que-acepte-todos-los-caracteres-latinos,
-//     author/user name: Mariano,
-//     date: 1 dic. 15 at 20:55*/
-//     if (/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i.test(mail.value)){
-
-//         error[2].style.display = "none";
-//         inputRed[2].classList.remove('input-error');
-//        } else{
-
-//            error[2].style.display = "initial";
-//            inputRed[2].classList.add('input-error');
-//            inputRed[2].style.margin = "5px 0px 5px 0px";
-//            errorState = true;
-//     }
-
-//     /*PASSWORD VALIDATION */
-//     if( password.value == ""){
-
-//         error[3].style.display = "initial";
-//         inputRed[3].classList.add('input-error');
-//         inputRed[3].style.margin = "5px 0px 5px 0px";
-//         button.style.margin = "15px 0px 0px 0px";
-//         errorState = true;
-//     }else{
-
-//         error[3].style.display = "none";
-//         inputRed[3].classList.remove('input-error');
-//     }
-
-//     /*RETURN THE STYLES AND STATES TO THE ORIGINAL VALUES*/
-//     if(errorState == false){
-
-//         firstName.value = "";
-//         lastName.value = "";
-//         mail.value = "";
-//         password.value = "";
-//         inputRed[0].style.margin = "0px 0px 20px 0px";
-//         inputRed[1].style.margin = "0px 0px 20px 0px";
-//         inputRed[2].style.margin = "0px 0px 20px 0px";
-//         inputRed[3].style.margin = "0px 0px 20px 0px";
-//     }
-//   }
-
-
-
-
