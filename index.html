@@ -14,7 +14,6 @@
   <link rel="stylesheet" href="css/module.css">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/responsive.css">
-  <script src="javascript/validation.js"></script>
 </head>
 <body>
 
@@ -40,7 +39,7 @@
           <span class="register-container__error">Looks like this is not an email</span>
           <input aria-label="Password" type="password" class="input" id="password" placeholder="Password" required >
           <span class="register-container__error">Password cannot be empty</span>
-          <button class="button" id="button_send" type="submit" onclick="getValues()">CLAIM YOUR FREE TRIAL</button>
+          <button class="button" id="button_send" type="button" onclick="getValues()">CLAIM YOUR FREE TRIAL</button>
           <p class="register-container__terms">By clicking the button, you are agreeing to our<a class="register-container__link" href="#"><br class="main-text__break--mobile"> Terms and Services</a></p>
         </form>
       </div>
@@ -54,5 +53,6 @@
     </footer>
 
   </section>
+  <script src="javascript/validation.js"></script>
 </body>
 </html>
